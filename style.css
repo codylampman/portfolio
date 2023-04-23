@@ -72,6 +72,7 @@ body {
     background-color: var(--background);
     display: flex;
     justify-content: center;
+    color: var(--color-text);
 }
 
 :root {
@@ -103,13 +104,32 @@ body {
     margin: auto;
 }
 
+/*  text utility  */
+
 .text {
     display: flex;
     flex-direction: column;
-    max-width: 670px;
+    gap: 32px;
+    max-width: 660px;
     align-items: center;
     justify-content: center;
+    padding: 0 24px;
+    text-align: left;
 }
+
+@media screen and (min-width: 875px) {
+
+    .text p {
+        padding: 0;
+    }
+
+    .text h1 {
+        text-align: center;
+    }
+
+}
+
+/*  red text utility  */
 
 .red p a h1 h2 h3 h4 {
     color: var(--color-secondary);
@@ -119,10 +139,13 @@ body {
 
 
 /*
-    TYPOGRAPHY
+    TYPOGRAPHY - MOBILE STYLES
 */
 h1 {
-
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    line-height: 4rem;
+    color: var(--color-text);
 }
 
 h2 {
@@ -145,6 +168,8 @@ p {
     max-width: 50ch;
     padding: 16px;
     color: var(--color-text);
+    text-align: left;
+    padding: 0;
   }
 
 p > a {
@@ -285,7 +310,7 @@ nav a:hover {
     text-decoration: none;  
     grid-column: 4 / 5;
     transition: ease-in-out 150ms;
-    margin-left: 3em;
+    margin-left: 24px;
 }
 
 .button:hover {
@@ -367,4 +392,38 @@ nav a:hover {
 
 
 
+/*HERO SECTION*/
 
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-secondary);
+}
+
+section#hero .text {
+    margin-top: 10%;
+}
+
+  .icons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  section#hero .subhead {
+    max-width: 270px;
+  }
+
+.star-feature {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+
+/*CASE STUDY SUMMARY SECTION*/
