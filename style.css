@@ -76,7 +76,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    gap: 148px;
+    gap: 120px;
     max-width: 1040px;
     margin: auto;
 }
@@ -184,6 +184,11 @@ h5 {
     color: var(--color-subhead);
 }
 
+h5 a {
+    text-decoration: none;
+    color: var(--color-subhead);
+   }
+
 p {
     font-size: 20px;
     font-family: var(--font-serif);
@@ -209,6 +214,11 @@ p {
     line-height: 1rem;
     text-transform: uppercase;
     color: var(--color-subhead);
+  }
+
+  .subhead-small a {
+    color: var(--color-subhead);
+    text-decoration: none;
   }
 
 p > a {
@@ -442,12 +452,13 @@ section#hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: -10%;
     text-align: center;
     color: var(--color-secondary);
 }
 
 section#hero .text {
-    margin-top: 10%;
+    margin-top: 20%;
     text-align: center;
 }
 
@@ -467,6 +478,12 @@ section#hero .text {
     flex-direction: column;
     gap: 8px;
     align-items: center;
+}
+
+@media screen and (min-width: 875px) {
+    section#hero .text {
+        margin-top: 10%;
+    }
 }
 
 
@@ -501,11 +518,18 @@ section#hero .text {
 @media screen and (min-width: 875px) {
     .work-summary {
         flex-direction: row;
+        gap: 48px;
     }
 
     .summary {
-        max-width: 475px;
+        max-width: 100%;
         margin-top: 0;
+        align-items: flex-end;
+    }
+
+    .summary p {
+        text-align: justify;
+        line-height: 2rem;
     }
 }
 
@@ -522,7 +546,7 @@ section#hero .text {
         margin: auto;
         justify-content: center;
         align-items: center;
-        padding: 24px;
+        padding: 0 24px;
     }
     
 
@@ -726,6 +750,7 @@ section#hero .text {
         margin: auto;
         gap: 48px;
         padding: 0 24px;
+        
        }
 
        .featured-review {
@@ -736,6 +761,10 @@ section#hero .text {
         justify-content: center;
         align-items: center;
         margin-bottom: 24px;
+       }
+
+       .featured-review img {
+        max-width: 100px;
        }
 
        .featured-review-title {
@@ -774,13 +803,14 @@ section#hero .text {
     }
 
     .review-card img {
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 30px;
     }
 
     .review {
         margin-bottom: 72px;
         margin-top: 24px;
+        text-wrap: balanced     
     }
 
     .review-card-author {
@@ -790,16 +820,26 @@ section#hero .text {
         gap: 16px;
     }
 
+    .review-card-author img {
+        height: 45px;
+        width: 45px;
+    }
+
     .review-card-author-title {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 8px;
+        margin-top: 8px;
+        gap: 12px;
     }
 
     .review-card-author-title .body-small {
         margin: 0;
         line-height: 0;
+    }
+
+    .review-card-author-img {
+        max-width: 50px;
     }
 
 
@@ -857,8 +897,8 @@ section#hero .text {
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 20%;
-    padding: 128px 60px;
+    margin-top: 10%;
+    padding: 60px 60px;
     justify-content: space-between;
     align-items: center;
     gap: 24px;
@@ -914,6 +954,13 @@ footer {
     }
 
     .business-info {
-        align-items: left;
+        align-items: end;
+    }
+
+    .logo-and-slogan {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
     }
 }
