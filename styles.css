@@ -122,6 +122,16 @@ main {
     text-align: left;
 }
 
+.text a {
+    text-decoration: none;
+    color: var(--color-subhead);
+}
+
+.text a on:hover {
+    cursor: pointer;
+}
+
+
 @media screen and (min-width: 875px) {
 
     .text p {
@@ -227,6 +237,12 @@ p > a {
 }
 
 
+
+.image-with-caption figcaption {
+   font-family: var(--font-serif);
+   font-style: italic;
+   padding-top: 8px;
+}
 
 
 
@@ -531,6 +547,10 @@ section#hero .text {
         text-align: justify;
         line-height: 2rem;
     }
+
+    .role-and-produced {
+        text-align: right;
+    }
 }
 
 
@@ -563,6 +583,14 @@ section#hero .text {
 
     .testimonial span {
         color: var(--color-secondary);
+    }
+
+    .author-info {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
 
@@ -720,15 +748,54 @@ section#hero .text {
         gap: 48px;
       }
 
-      .question {
+
+       #accordion {
+        margin: 100px auto;
         width: 100%;
+
+       }
+
+       #accordion li {
+        list-style: none;
+        width: 100%;
+        margin-bottom: 10px;
+        background: var(--background);
+        padding: 10px;
+        border-radius: 4px;;
+       }
+
+       #accordion li p {
+        padding-bottom: 16px;
+       }
+
+       #accordion li label {
+        padding: 10px;
         display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
+        align-items: center;
+        align-content: space-between;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 500;
+       }
+
+       #accordion label + input[type="radio"]{
+        display: none;
+       }
+
+       #accordion .content{
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.1s;
+       }
+
+       #accordion label + input[type="radio"]:checked + .content {
+        max-height: 100%;
+       }
 
 
-      @media screen and (min-width: 875px) {
+       @media screen and (min-width: 875px) {
         #faq {
             align-items: center;
         }
