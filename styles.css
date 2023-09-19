@@ -419,6 +419,7 @@ nav a:hover {
 
     .logo-wrapper {
         display: flex;
+        flex-direction: row;
         gap: 8px;
         margin-left: 32px;
         text-decoration: none;
@@ -426,7 +427,7 @@ nav a:hover {
 
     .logo {
         display: block;
-        max-width: 32px;
+        width: 32px;
         font-size: x-large;
         color: var(--color-subhead);
     }
