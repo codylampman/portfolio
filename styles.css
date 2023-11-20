@@ -484,7 +484,7 @@ nav a:hover {
 /*HERO SECTION*/
 
 section#hero {
-    height: calc(100vh - 60px);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -952,7 +952,7 @@ section#hero .text {
 }
 
 #cta h2 {
-    text-align: center;
+    text-align: left;
 }
 
 .btn-secondary {
@@ -976,6 +976,12 @@ section#hero .text {
     filter: brightness(85%);
     cursor: pointer;
 }
+
+@media screen and (min-width: 875px) {
+    #cta h2 {
+        text-align: center;
+    }
+}
     
 
 
@@ -991,7 +997,7 @@ footer {
     align-items: center;
     gap: 24px;
     text-align: center;
-    background-color: var(--color-primary);
+    background-color: var(--background);
     width: 100vw;
 }
 
