@@ -261,13 +261,50 @@ p > a {
 
 
 /*
+    Banner starts here
+*/
+
+.banner {
+    background-color: var(--color-secondary);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    z-index: 100000;
+    margin-bottom: 100px;
+    padding: 8px 0px 8px 0px;
+    font-style: italic;
+}
+
+.banner p {
+    max-width: 100ch;
+    font-size: 16px;
+    color: #F7FFFF;
+}
+
+.banner a {
+    color: #F7FFFF;
+    
+}
+
+.banner a:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*
     Navigation starts here
 */
 header {
     background: var(--background);
     text-align: center;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 32px;
     left: 0;
     right: 0;
     width: 100%;
