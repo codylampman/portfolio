@@ -1041,7 +1041,8 @@ footer {
 .logo-and-slogan {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 4px;
+    padding-bottom: 6px;
 }
 
 .center-text {
@@ -1070,7 +1071,7 @@ footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 4px;
+    gap: 2px;
 }
 
 .business-info a {
@@ -1086,12 +1087,13 @@ footer {
 
     .business-info {
         align-items: end;
+        padding-bottom: 8px;
     }
 
     .logo-and-slogan {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        gap: 4px;
         align-items: flex-start;
     }
 }
