@@ -1058,3 +1058,37 @@ footer {
     align-items: flex-start;
   }
 }
+
+/*
+    Mobile fix (below the 875px breakpoint only; desktop is untouched)
+    - Banner and header flow in order instead of floating at fixed offsets,
+      so a two-line banner on phones no longer covers the header.
+    - Hero grows with its content instead of being locked to one screen
+      tall, so the stars, quote and headline are no longer cut off.
+*/
+@media screen and (max-width: 874px) {
+  .banner {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 24px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  header {
+    position: relative;
+    top: 0;
+  }
+
+  section#hero {
+    height: auto;
+    justify-content: flex-start;
+    margin-bottom: 0;
+    padding-bottom: 48px;
+  }
+
+  section#hero .text {
+    margin-top: 24px;
+  }
+}
